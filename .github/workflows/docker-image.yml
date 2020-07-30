@@ -11,7 +11,6 @@ build:
 runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v1
             - name: Login to DockerHub Registry
               run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
             - name: Get the version
